@@ -1,6 +1,5 @@
 "use strict";
 
-// const { describe } = require('eslint/lib/rule-tester/rule-tester');
 const Node = require("../node.js");
 
 describe("testing node", () => {
