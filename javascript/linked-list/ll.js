@@ -10,35 +10,18 @@ class LinkedList {
   insert(value) {
     const node = new Node(value);
     if (!this.head) {
-      //means LL is empty null is falsy value (not false)
       this.head = node;
     } else {
-      //means LL is not empty
       node.next = this.head;
       this.head = node;
-    }
-  }
-  append(value) {
-    const node = new Node(value);
-    if (!this.head) {
-      //means LL is empty
-      this.head = node;
-    } else {
-      //means LL is not empty
-      let currentNode = this.head;
-
-      while (currentNode.next) {
-        currentNode = currentNode.next;
-      }
-      currentNode.next = node;
     }
   }
 
   includes(value) {
     if (this.head !== null) {
-      let pointer = this.head;
-      while (pointer !== null) {
-        if (pointer.value !== value) pointer = pointer.next;
+      let val = this.head;
+      while (val !== null) {
+        if (val.value !== value) val = val.next;
         else return true;
       }
       return false;
@@ -46,16 +29,42 @@ class LinkedList {
   }
 
   toString() {
-    let allValues = "";
+    let newValue = "";
     if (this.head !== null) {
-      let pointer = this.head;
-      while (pointer !== null) {
-        allValues = allValues + `{ ${pointer.value} } -> `;
-        pointer = pointer.next;
+      let val = this.head;
+      while (val !== null) {
+        newValue = newValue + `{ ${val.value} } -> `;
+        val = val.next;
       }
-      allValues = allValues + `NULL`;
-      return allValues;
-    } else return "empty list";
+      newValue = newValue + `NULL`;
+      return newValue;
+    } else return "this is empty list";
   }
 }
+  append(value) {
+    const anotherNode = new Node(value);
+    let current = this.head;
+    if (this.head == null) {
+      this.head = anotherNode;
+    } else {
+      while (current.next != null) {
+        current = current.next;
+      }
+      current.next = anotherNode;
+    }
+  }
+  insertBefore(preValue, inValue) {
+    const node = new Node(inValue);
+    let current = this.head;
+    while (current.next != null) {
+        current = current.next;
+        if (current.next.value == preValue) {
+            node.next = current.next;
+            current.next = node;
+            return null;
+        }
+    }
+}
+
+
 module.exports = LinkedList;
