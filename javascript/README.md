@@ -8,4 +8,5 @@
 | 02 | [array-insert-shift](./code-challenges/ch2-array-insert-shift/README.md) |
 | 03 | [array-binary-search](./code-challenges/ch3-array-binary-search/README.md) 
 | 04 | [Linked-Lists](./linked-list/README.md) |
+| challenge 07 | [Linked-Lists](./linked-list/linked-list-kth/linked-list-kth.md) |
 

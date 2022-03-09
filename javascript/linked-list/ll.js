@@ -64,7 +64,25 @@ class LinkedList {
       current = current.next;
     }
   }
+  Kth(k) {
+    let current = this.head;
+    let list = 0;
+    while (current) {
+      current = current.next;
+      list++;
+    }
+    if (k < 0 || k > list) {
+      return "exception";
+    } else {
+      list = list - 1 - k;
+      current = this.head;
+      while (list > 0) {
+        current = current.next;
+        list--;
+      }
+      return current.value;
+    }
+  }
 }
 
 module.exports = LinkedList;
-module.exports = Node;
