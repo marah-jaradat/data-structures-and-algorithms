@@ -9,7 +9,7 @@ class LinkedList {
 
   insert(value) {
     const node = new Node(value);
-    if (!this.head) {
+    if (!this.head === null) {
       this.head = node;
     } else {
       node.next = this.head;
@@ -18,53 +18,53 @@ class LinkedList {
   }
 
   includes(value) {
-    if (this.head !== null) {
-      let val = this.head;
-      while (val !== null) {
-        if (val.value !== value) val = val.next;
-        else return true;
-      }
-      return false;
-    } else return false;
+    let val = this.head;
+    while (val) {
+      if (val.value === value) return true;
+      val = val.next;
+    }
+    return false;
   }
 
   toString() {
-    let newValue = "";
-    if (this.head !== null) {
-      let val = this.head;
-      while (val !== null) {
-        newValue = newValue + `{ ${val.value} } -> `;
-        val = val.next;
-      }
-      newValue = newValue + `NULL`;
-      return newValue;
-    } else return "this is empty list";
+    let val = "";
+    let nod = this.head;
+    while (val) {
+      nod = nod + `{${nod.value}} `;
+      nod = nod.next;
+    }
+    return nod + "null";
   }
-}
+
   append(value) {
     const anotherNode = new Node(value);
-    let current = this.head;
-    if (this.head == null) {
+    if (!this.head) {
       this.head = anotherNode;
-    } else {
-      while (current.next != null) {
-        current = current.next;
+    }
+    let current = this.head;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = anotherNode;
+  }
+
+  insertBefore(preValue, newValue) {
+    let newnode = new Node(newValue);
+    let current = this.head;
+    if (preValue === this.head.value) {
+      this.insert(newValue);
+      return this.head;
+    }
+    while (current.next !== null) {
+      if (current.next.value === preValue) {
+        newnode = current.next;
+        current.next = newnode;
+        return this.head;
       }
-      current.next = anotherNode;
+      current = current.next;
     }
   }
-  insertBefore(preValue, inValue) {
-    const node = new Node(inValue);
-    let current = this.head;
-    while (current.next != null) {
-        current = current.next;
-        if (current.next.value == preValue) {
-            node.next = current.next;
-            current.next = node;
-            return null;
-        }
-    }
 }
 
-
 module.exports = LinkedList;
+module.exports = Node;
