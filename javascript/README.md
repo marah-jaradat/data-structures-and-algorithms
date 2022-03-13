@@ -9,4 +9,5 @@
 | 03 | [array-binary-search](./code-challenges/ch3-array-binary-search/README.md) 
 | 04 | [Linked-Lists](./linked-list/README.md) |
 | challenge 07 | [Linked-Lists](./linked-list/linked-list-kth/linked-list-kth.md) |
+| challenge 08 | [Linked-Lists](./linked-list/lab8/ch8.png) |
 
