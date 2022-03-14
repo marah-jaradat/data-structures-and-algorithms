@@ -22,7 +22,7 @@ Create singly linked- list and implement it
 
 ## Whiteboard Process
 
-![link list](./linked-list-implemintation.png)
+![link list](./assets/ll.png)
 
 
 
