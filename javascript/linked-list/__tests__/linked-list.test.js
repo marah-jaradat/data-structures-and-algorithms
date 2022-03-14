@@ -4,99 +4,63 @@ const { it } = require("eslint/lib/rule-tester/rule-tester");
 const LinkedList = require("../ll");
 
 describe("testing Linked List", () => {
-  it("test creating link list", () => {
+  it("initiat an enpty list", () => {
     let ll = new LinkedList();
-    expect(ll).toBeInstanceOf(LinkedList);
+
     expect(ll).toBeDefined();
     expect(ll.head).toBeNull();
   });
 });
 
 describe("test inserting to ll", () => {
-  it("test insert", () => {
+  it("can insert into the list", () => {
     let ll = new LinkedList();
-    ll.insert("myList");
-    expect(ll.head.value).toBe("myList");
+    ll.insert("insertedList");
+    expect(ll).toBeDefined();
+    expect(ll.head.value).toBe("insertedList");
     expect(ll.head.next).toBeNull();
   });
 
-  it("test to add to not empty LL", () => {
+  it("head properly point to first node in link", () => {
     let ll = new LinkedList();
-    ll.insert("test1");
-    ll.insert("test2");
-    expect(ll.head.value).toEqual("test2");
-    expect(ll.head.next.value).toEqual("test1");
+    ll.insert("insertedFirst");
+    expect(ll).toBeDefined();
+    expect(ll.head.value).toEqual("insertedFirst");
   });
-});
 
-describe("append to the end of the LL", () => {
-  it("test multiple append ", () => {
-    const ll = new LinkedList();
-    ll.insert("test1");
-    ll.insert("test2");
-    ll.insert("test3");
-    expect(ll.head.value).toBe("test1");
-    expect(ll.head.next.value).toBe("test2");
-    expect(ll.head.next.next.value).toBe("test3");
+  it("Can insert multiple nodes into the list", () => {
+    let ll = new LinkedList();
+    ll.insert("insertedMultiple1");
+    ll.insert("insertedMultiple2");
+    ll.insert("insertedMultiple3");
+    expect(ll).toBeDefined();
+    expect(ll.head.value).toBe("insertedMultiple3");
+    expect(ll.head.next.value).toBe("insertedMultiple2");
+    expect(ll.head.next.next.value).toBe("insertedMultiple1");
     expect(ll.head.next.next.next).toBeNull();
   });
 });
 
-describe("check if it exists", () => {
-  it("test includes", () => {
+describe("test Include", () => {
+  it("test if Will return true value", () => {
     let ll = new LinkedList();
-    ll.insert("test1");
-    ll.insert("test2");
-    expect(ll.includes("test1")).toBe(true);
-    expect(ll.includes("test2")).toBe(true);
-    expect(ll.includes("test3")).toBe(false);
+    ll.insert("insertedMultiple1");
+    ll.insert("insertedMultiple2");
+    ll.insert("insertedMultiple3");
+    expect(ll).toBeDefined();
+    expect(ll.includes("insertedMultiple1")).toEqual(true);
+    expect(ll.includes("insertedMultiple2")).toEqual(true);
+    expect(ll.includes("insertedMultiple3333")).toEqual(false);
   });
 });
 
-describe("get string", () => {
-  it("test  tostring", () => {
+describe("To string", () => {
+  it("Can return a collection of all the values", () => {
     let ll = new LinkedList();
-    ll.insert(3);
-    ll.insert(2);
-    ll.insert(1);
-    console.log(ll);
-    expect(ll.toString()).toEqual(expect.any(String));
-    expect(ll.toString()).toMatch("{1} -> {2} -> {3} -> NULL");
-  });
-});
-
-describe("before", () => {
-  it("test to insert before ll", () => {
-    let ll = new LinkedList();
-    ll.insert("test1");
-    ll.insert("test2");
-    ll.insert("test3");
-    ll.insert("test4");
-    ll.insertBefore("test10");
-
-    expect(ll.head.value).toEqual("test10");
-    expect(ll.head.next.value).toEqual("test1");
-    expect(ll.head.next.next.value).toEqual("test2");
-    expect(ll.head.next.next.next.value).toEqual("test3");
-    expect(ll.head.next.next.next.next.value).toEqual("test4");
-    expect(ll.head.next.next.next.next).toBeNull();
-  });
-});
-
-describe("after", () => {
-  it("test to insert after ll", () => {
-    let ll = new LinkedList();
-    ll.append("test1");
-    ll.append("test2");
-    ll.append("test3");
-    ll.append("test4");
-    ll.insertAfter("test10");
-
-    expect(ll.head.value).toEqual("test1");
-    expect(ll.head.next.value).toEqual("test2");
-    expect(ll.head.next.next.value).toEqual("test3");
-    expect(ll.head.next.next.next.value).toEqual("test4");
-    expect(ll.head.next.next.next.next.value).toEqual("test10");
-    expect(ll.head.next.next.next.next).toBeNull();
+    ll.insert("c");
+    ll.insert("b");
+    ll.insert("a");
+    // console.log(ll);
+    expect(ll.toString()).toEqual("{ a } -> { b } -> { c } -> NULL");
   });
 });
