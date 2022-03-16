@@ -49,5 +49,49 @@ class LinkedList {
       console.error("include is invalid");
     }
   }
+
+  append(value) {
+    const node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+    }
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = node;
+  }
+
+  insertBefore(value, newValue) {
+    let node = new Node(newValue);
+    let current = this.head;
+
+    if (value === this.head.value) {
+      this.insert(newValue);
+      return this.head;
+    }
+    while (current.next) {
+      if (current.next.value === value) {
+        node = current.next;
+        current.next = node;
+        return this.head;
+      }
+      current = current.next;
+    }
+  }
+
+  insertAfter(newValue, value) {
+    let node = new Node(newValue);
+    let current = this.head;
+
+    while (current.next) {
+      current = current.next;
+
+      if (current.value === value) {
+        node.next = current.next;
+        current.next = node;
+      }
+    }
+  }
 }
 module.exports = LinkedList;
