@@ -9,6 +9,8 @@
 | 03 | [array-binary-search](./code-challenges/ch3-array-binary-search/README.md) 
 | 04 | [Linked-Lists2](./linked-list/readme/single.list.md) |
 | 05 | [linked-list-insertions](./linked-list/readme/extend.md) |
+| 06 | [k-th value](./linked-list/readme/kth.md) |
+| 07 | [linked-list-zip](./linked-list/readme/zipList.md) |
 
 
 
