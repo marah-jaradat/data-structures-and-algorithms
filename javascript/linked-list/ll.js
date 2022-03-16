@@ -93,5 +93,66 @@ class LinkedList {
       }
     }
   }
+
+  Kth(k) {
+    let current = this.head;
+    let length = 0;
+    while (current) {
+      current = current.next;
+      length++;
+    }
+    if (k < 0 || k > length) {
+      return "exception";
+    } else {
+      length = length - 1 - k;
+      current = this.head;
+      while (length > 0) {
+        current = current.next;
+        length--;
+      }
+      return current.value;
+    }
+  }
+
+  // zipLists(l1, l2) {
+  //   let list1 = l1.head;
+  //   let list2 = l2.head;
+
+  //   while (list1.next && list2.next) {
+  //     l2.head = l2.head.next;
+  //     list2.next = list1.next;
+  //     list1.next = list2;
+  //     list2 = l2.head;
+  //     list1 = l1.next;
+
+  //     if (list1 || list2) {
+  //       this.append(list1);
+  //       list1 = l1.next;
+  //       return list1;
+  //     } else {
+  //       this.append(list1.value);
+  //       list2 = list2.next;
+  //     }
+  //     return list2;
+  //   }
+  // }
+
+  zipLists(l1, l2) {
+    let list1 = l1.head;
+    let list2 = l2.head;
+    while (l2.head && list1) {
+      l2.head = l2.head.next;
+      list2.next = list1.next;
+      list1.next = list2;
+      list2 = l2.head;
+      list1 = list1.next.next;
+    }
+    while (l2.head) {
+      l1.append(l2.head.value);
+      l2.head = l2.head.next;
+    }
+
+    return l1.toString();
+  }
 }
 module.exports = LinkedList;
