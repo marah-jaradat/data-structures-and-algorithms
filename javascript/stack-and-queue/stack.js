@@ -9,9 +9,14 @@ class Stack {
     this.length = 0;
   }
   pushItem(value) {
-    this.storage.append(value);
-    this.top = value;
-    this.length++;
+    const node = new Node(value);
+    if (this.top === null) {
+      this.top = node;
+      this.length++;
+    } else {
+      node.next = this.top;
+      this.top = node;
+    }
   }
 
   peak() {

@@ -11,6 +11,7 @@
 | 05 | [linked-list-insertions](./linked-list/readme/extend.md) |
 | 06 | [k-th value](./linked-list/readme/kth.md) |
 | 07 | [linked-list-zip](./linked-list/readme/zipList.md) |
+| 08 | [Stack-/queue](./linked-list/readme/stack.md) |
 
 
 

@@ -114,29 +114,6 @@ class LinkedList {
     }
   }
 
-  // zipLists(l1, l2) {
-  //   let list1 = l1.head;
-  //   let list2 = l2.head;
-
-  //   while (list1.next && list2.next) {
-  //     l2.head = l2.head.next;
-  //     list2.next = list1.next;
-  //     list1.next = list2;
-  //     list2 = l2.head;
-  //     list1 = l1.next;
-
-  //     if (list1 || list2) {
-  //       this.append(list1);
-  //       list1 = l1.next;
-  //       return list1;
-  //     } else {
-  //       this.append(list1.value);
-  //       list2 = list2.next;
-  //     }
-  //     return list2;
-  //   }
-  // }
-
   zipLists(l1, l2) {
     let list1 = l1.head;
     let list2 = l2.head;

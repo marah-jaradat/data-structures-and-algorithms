@@ -3,31 +3,42 @@
 const Stack = require("../stack");
 
 describe("testing the stack", () => {
-  it("test creating a Stack", () => {
+  it("Can successfully instantiate an empty stack", () => {
     let newStack = new Stack();
     expect(newStack instanceof Stack).toBeTruthy();
   });
 
-  it("test the peak", () => {
+  it("Can successfully peek the next item on the stack", () => {
     let newStack = new Stack();
-    expect(newStack.peek()).toBeNull();
+    expect(newStack.peak()).toBeNull();
   });
 
-  it("testing push to the stack", () => {
+  it("Can successfully push onto a stack", () => {
     let newStack = new Stack();
     newStack.pushItem(1);
-    expect(newStack.top).toEqual(1);
     newStack.pushItem(2);
-    expect(newStack.top).toEqual(2);
+    expect(newStack.top.value).toEqual(2);
+    expect(newStack.top.next.value).toEqual(1);
   });
 
-  it("testing pop from the stack", () => {
+  it("Can successfully pop off the stack", () => {
     let newStack = new Stack();
     newStack.pushItem(1);
     newStack.pushItem(2);
     newStack.pushItem(3);
+    newStack.pushItem(4);
     expect(newStack.popItem()).toEqual(3);
     expect(newStack.popItem()).toEqual(2);
     expect(newStack.popItem()).toEqual(1);
+  });
+
+  it("Can successfully peek the next item on the stack", () => {
+    const newStack = new Stack();
+    const newStack2 = new Stack();
+    newStack.pushItem(3);
+    newStack.pushItem(4);
+
+    expect(newStack.isEmpty()).toBeFalsy();
+    expect(newStack2.isEmpty()).toBeTruthy();
   });
 });
