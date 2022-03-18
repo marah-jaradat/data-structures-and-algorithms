@@ -9,33 +9,40 @@ class Queue {
     this.rear = null;
     this.front = null;
   }
-
   enqueue(value) {
     let node = new Node(value);
 
-    if (this.rear === null) {
-      this.rear = node;
+    if (this.front === null) {
+      this.front = node;
       return;
     } else {
-      this.rear.next = node;
+      // this.rear.next = node;
       this.rear = node;
     }
     this.length++;
     // this.storage.append(value);
   }
-
   dequeue() {
     if (this.front === null) {
-      return;
+      return "exception";
     }
-    // let node = this.front;
-    this.front = this.front.next;
-
-    if (this.front === null) this.rear = null;
+    let current = this.front;
+    this.front = current.next;
+    current.next = null;
+    return current.value;
   }
+  // dequeue() {
+  //   if (this.front === null) {
+  //     return "exception";
+  //   }
+  //   let node = this.front;
+  //   this.front = node.next;
+  //   node.next = null;
+  //   return node.value;
+  // }
 
   peek() {
-    if (this.storage.head) {
+    if (this.length) {
       return this.storage.head.value;
     } else {
       return "exception";
