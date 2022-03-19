@@ -12,6 +12,7 @@
 | 06 | [k-th value](./linked-list/readme/kth.md) |
 | 07 | [linked-list-zip](./linked-list/readme/zipList.md) |
 | 08 | [Stack-/queue](./linked-list/readme/stack.md) |
+| 09 | [pseudo](./linked-list/readme/pseudo.md) |
 
 
 
