@@ -24,18 +24,18 @@ Using a Linked List as the underlying data storage mechanism, implement both a S
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| stack push|O(n): used while loop| O(n): adding new elements|
-| stack pop|O(n): used while loop| O(n): adding new elements|
-| stack peek|O(n): used while loop| O(n): adding new elements|
-| stack is empty|O(n): used while loop| O(n): adding new elements|
-| enqueue|O(n): used while loop| O(n): adding new elements|
-| dequeue|O(n): used while loop| O(n): adding new elements|
-| peek queue|O(n): used while loop| O(n): adding new elements|
-| is empty queue|O(n): used while loop| O(n): adding new elements|
+| stack push|O(1): used if only| O(1): adding new elements|
+| stack pop|O(1): used if only| O(1): adding new elements|
+| stack peek|O(1): used if only| O(1): adding new elements|
+| stack is empty|O(1): used if only| O(1): adding new elements|
+| enqueue|O(1): used if only| O(1): adding new elements|
+| dequeue|O(1): used if only| O(1): adding new elements|
+| peek queue|O(1): used if only| O(1): adding new elements|
+| is empty queue|O(1): used if only| O(1): adding new elements|
 
 ## Whiteboard Process
 
-![stack-and-queue](./../assets/zip-list.png)
+![stack-and-queue](./../assets/stack%26queue.png)
 
 
 

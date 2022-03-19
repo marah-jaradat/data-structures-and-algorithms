@@ -2,41 +2,41 @@
 const Node = require("../linked-list/node");
 class Queue {
   constructor() {
-    this.top = null;
+    this.front = null;
     this.tail = null;
     this.length = 0;
   }
   enqueue(value) {
     let node = new Node(value);
-    if (this.top) {
+    if (this.front) {
       this.tail.next = node;
       this.tail = node;
     } else {
-      this.top = node;
+      this.front = node;
       this.tail = node;
     }
   }
 
   dequeue() {
-    if (this.top) {
-      this.top.next = this.top;
-      this.top = this.top.next;
-      this.top.next = null;
-      return this.top.value;
+    if (this.front) {
+      this.front.next = this.front;
+      this.front = this.front.next;
+      this.front.next = null;
+      return this.front.value;
     }
     return "exception";
   }
 
   peek() {
-    if (this.top) {
-      return this.top;
+    if (this.front) {
+      return this.front;
     } else {
       return "exception";
     }
   }
 
   isEmpty() {
-    if (this.top) {
+    if (this.front) {
       return false;
     } else {
       return true;
