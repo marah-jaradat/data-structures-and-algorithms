@@ -26,7 +26,7 @@ Internally, utilize 2 Stack instances to create and manage the queue
 
 ## Whiteboard Process
 
-![link list](./assets/ll.png)
+![link list](./../assets/PseudoQueue.png)
 
 
 
