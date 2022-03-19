@@ -1,59 +1,47 @@
 "use strict";
-
 const Node = require("../linked-list/node");
-
 class Queue {
-  constructor(key) {
-    this.key = key;
-    this.next = null;
-    this.rear = null;
-    this.front = null;
+  constructor() {
+    this.top = null;
+    this.tail = null;
+    this.length = 0;
   }
   enqueue(value) {
     let node = new Node(value);
-
-    if (this.front === null) {
-      this.front = node;
-      return;
+    if (this.top) {
+      this.tail.next = node;
+      this.tail = node;
     } else {
-      // this.rear.next = node;
-      this.rear = node;
+      this.top = node;
+      this.tail = node;
     }
-    this.length++;
-    // this.storage.append(value);
   }
+
   dequeue() {
-    if (this.front === null) {
-      return "exception";
+    if (this.top) {
+      this.top.next = this.top;
+      this.top = this.top.next;
+      this.top.next = null;
+      return this.top.value;
     }
-    let current = this.front;
-    this.front = current.next;
-    current.next = null;
-    return current.value;
+    return "exception";
   }
-  // dequeue() {
-  //   if (this.front === null) {
-  //     return "exception";
-  //   }
-  //   let node = this.front;
-  //   this.front = node.next;
-  //   node.next = null;
-  //   return node.value;
-  // }
 
   peek() {
-    if (this.length) {
-      return this.storage.head.value;
+    if (this.top) {
+      return this.top;
     } else {
       return "exception";
     }
   }
+
   isEmpty() {
-    if (this.length) {
+    if (this.top) {
       return false;
     } else {
       return true;
     }
   }
 }
+
 module.exports = Queue;

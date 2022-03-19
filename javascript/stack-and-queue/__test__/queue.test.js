@@ -2,43 +2,46 @@
 
 const Queue = require("../queue");
 
-describe("test queue", () => {
+describe("testing the Queue", () => {
   it("testing if the Queue is created", () => {
-    let queue = new Queue();
-    expect(queue instanceof Queue).toBeTruthy();
+    const newQueue = new Queue();
+    expect(newQueue instanceof Queue).toBeTruthy();
+    // expect(queue).toBeDefined();
+    expect(newQueue.top).toBeNull();
   });
 
-  it("peek into a queue", () => {
-    let queue = new Queue();
-    expect(queue.peek()).toBe("exception");
+  it("Can enqueue into a queue", () => {
+    const newQueue = new Queue();
+    newQueue.enqueue(1);
+    newQueue.enqueue(2);
+    newQueue.enqueue(3);
+    expect(newQueue.top.value).toEqual(1);
+    expect(newQueue.top.next.value).toEqual(2);
   });
 
-  it("successfully enqueue into a queue", () => {
-    const queue = new Queue();
-    // queue.enqueue(1);
-    // queue.enqueue(2);
-    // queue.enqueue(3);
-    // expect(queue.peek()).toEqual(3);
-    // expect(queue.peek()).toEqual(2);
-    // expect(queue.peek()).toEqual(3);
-    expect(queue.peek()).toBe("exception");
+  it("Can dequeue out of a queue the expected value", () => {
+    const newQueue = new Queue();
+    newQueue.enqueue(4);
+    newQueue.enqueue(5);
+    expect(newQueue.dequeue()).toEqual(4);
+    expect(newQueue.dequeue()).toEqual(4);
   });
 
-  it("testing dequeue method", () => {
-    const queue = new Queue();
-    queue.enqueue(3);
-    queue.enqueue(4);
-    queue.enqueue(5);
-    expect(queue.dequeue()).toEqual(3);
-    expect(queue.front.value).toEqual(4);
+  it("Can peek into a queue, seeing the expected value", () => {
+    const newQueue = new Queue();
+    const newQueue2 = new Queue();
+    newQueue.enqueue(3);
+    newQueue.enqueue(4);
+    expect(newQueue.peek().value).toBe(3);
+    expect(newQueue2.peek()).toBe("exception");
   });
 
-  it("dequeue or peek on empty queue ", () => {
-    const fqueue = new Queue();
-    const tqueue = new Queue();
-    fqueue.dequeue(3);
-    fqueue.dequeue(4);
-    // expect(fqueue.isEmpty()).toBeFalsy();
-    expect(tqueue.isEmpty()).toBeTruthy();
+  it("testing isEmpty method", () => {
+    const newQueue = new Queue();
+    const newQueue2 = new Queue();
+    newQueue.enqueue(3);
+    newQueue.enqueue(4);
+    expect(newQueue.isEmpty()).toBeFalsy();
+    expect(newQueue2.isEmpty()).toBeTruthy();
   });
 });

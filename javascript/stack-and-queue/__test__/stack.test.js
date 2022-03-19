@@ -2,7 +2,7 @@
 
 const Stack = require("../stack");
 
-describe("testing the stack", () => {
+describe("testing the Stack", () => {
   it("Can successfully instantiate an empty stack", () => {
     let newStack = new Stack();
     expect(newStack instanceof Stack).toBeTruthy();

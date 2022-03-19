@@ -6,10 +6,10 @@ Using a Linked List as the underlying data storage mechanism, implement both a S
 
 1. Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
 2. Create a Stack class that has a top property. 
-   - push: 
-   - pop:
-   - peek:
-   - is empty:
+   - push: use if statement to check is it null, and make returns
+   - pop: use if statement to check is it null, and make returns
+   - peek
+   - is empty
   
 3. Create a Queue class that has a front property. 
    - enqueue:
@@ -24,7 +24,14 @@ Using a Linked List as the underlying data storage mechanism, implement both a S
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| zip  two lists|O(n): used while loop| O(n): adding new elements|
+| stack push|O(n): used while loop| O(n): adding new elements|
+| stack pop|O(n): used while loop| O(n): adding new elements|
+| stack peek|O(n): used while loop| O(n): adding new elements|
+| stack is empty|O(n): used while loop| O(n): adding new elements|
+| enqueue|O(n): used while loop| O(n): adding new elements|
+| dequeue|O(n): used while loop| O(n): adding new elements|
+| peek queue|O(n): used while loop| O(n): adding new elements|
+| is empty queue|O(n): used while loop| O(n): adding new elements|
 
 ## Whiteboard Process
 
