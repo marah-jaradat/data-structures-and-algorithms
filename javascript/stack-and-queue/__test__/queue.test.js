@@ -7,7 +7,7 @@ describe("testing the Queue", () => {
     const newQueue = new Queue();
     expect(newQueue instanceof Queue).toBeTruthy();
     // expect(queue).toBeDefined();
-    expect(newQueue.top).toBeNull();
+    expect(newQueue.front).toBeNull();
   });
 
   it("Can enqueue into a queue", () => {
@@ -15,8 +15,8 @@ describe("testing the Queue", () => {
     newQueue.enqueue(1);
     newQueue.enqueue(2);
     newQueue.enqueue(3);
-    expect(newQueue.top.value).toEqual(1);
-    expect(newQueue.top.next.value).toEqual(2);
+    expect(newQueue.front.value).toEqual(1);
+    expect(newQueue.front.next.value).toEqual(2);
   });
 
   it("Can dequeue out of a queue the expected value", () => {
