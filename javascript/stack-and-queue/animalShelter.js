@@ -1,26 +1,28 @@
 "use strict";
 const queue = require("./queue");
 
-class animalShelter {
+class AnimalShelter {
   constructor() {
-    this.cat = new queue();
-    this.dog = new queue();
+    this.queue1 = new queue();
+    this.queue2 = new queue();
   }
 
   enqueue(animal) {
     if (animal === "cat") {
-      this.cat.enqueue(animal);
+      this.queue1.enqueue(animal);
     } else {
-      this.dog.enqueue(animal);
+      this.queue2.enqueue(animal);
     }
   }
 
-  dequeue(animal) {
-    if (animal === "cat") {
-      this.cat.dequeue(animal);
+  dequeue(pref) {
+    if (pref === "cat") {
+      this.queue1.dequeue(pref);
+    } else if (pref === "dog") {
+      this.queue2.dequeue(pref);
     } else {
-      this.dog.dequeue(animal);
+      return "null";
     }
   }
 }
-module.exports = animalShelter;
+module.exports = AnimalShelter;
