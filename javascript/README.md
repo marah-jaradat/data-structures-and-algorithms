@@ -13,6 +13,7 @@
 | 07 | [linked-list-zip](./linked-list/readme/zipList.md) |
 | 08 | [Stack-/queue](./linked-list/readme/stack.md) |
 | 09 | [pseudo](./linked-list/readme/pseudo.md) |
+| 10 | [Animal-Shelter](./linked-list/readme/animal.md) |
 
 
 
