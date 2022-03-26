@@ -23,8 +23,9 @@ class Queue {
       this.front = this.front.next;
       this.front.next = null;
       return this.front.value;
+    } else {
+      return "exception";
     }
-    return "exception";
   }
 
   peek() {
