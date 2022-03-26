@@ -11,9 +11,10 @@
 | 05 | [linked-list-insertions](./linked-list/readme/extend.md) |
 | 06 | [k-th value](./linked-list/readme/kth.md) |
 | 07 | [linked-list-zip](./linked-list/readme/zipList.md) |
-| 08 | [Stack-/queue](./linked-list/readme/stack.md) |
-| 09 | [pseudo](./linked-list/readme/pseudo.md) |
-| 10 | [Animal-Shelter](./linked-list/readme/animal.md) |
+| 08 | [Stack-/queue](./stack-and-queue/read/stack.md) |
+| 09 | [pseudo](./stack-and-queue/read/pseudo.md) |
+| 10 | [Animal-Shelter](./stack-and-queue/read/animal.md) |
+| 11 | [brackes](./stack-and-queue/read/brackets.md) |
 
 
 
