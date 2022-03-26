@@ -21,9 +21,9 @@ class Stack {
 
   peak() {
     if (this.top) {
-      return "exception";
-    } else {
       return this.top;
+    } else {
+      return "exception";
     }
   }
 
