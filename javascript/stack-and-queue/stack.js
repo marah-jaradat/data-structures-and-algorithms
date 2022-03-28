@@ -29,9 +29,11 @@ class Stack {
 
   popItem() {
     if (this.top) {
-      this.top = this.top.next;
+      let popValue = this.top;
+      this.top = popValue.next;
+      popValue.next = null;
       this.length--;
-      return this.top.value;
+      return popValue.value;
     } else {
       return "exception";
     }
