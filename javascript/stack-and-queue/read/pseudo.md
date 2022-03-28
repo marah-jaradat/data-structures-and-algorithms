@@ -13,7 +13,7 @@ Internally, utilize 2 Stack instances to create and manage the queue
    Inserts value into the PseudoQueue, using a first-in, first-out approach.
    - dequeue
    Arguments: none
-   Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+   Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
 2. Write tests to prove the following functionality
 
@@ -21,12 +21,11 @@ Internally, utilize 2 Stack instances to create and manage the queue
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| enqueue|O(1): because used if | O(1)|
-| dequeue|O(1): |O(1) |
+| enqueue|O(1): because push item  | O(1)|
+| dequeue|O(1):because used if |O(1) |
 
 ## Whiteboard Process
+![PseudoQueue](../../linked-list/assets/PseudoQueue11.png)
 
-![link list](./../assets/PseudoQueue.png)
-
-
-
+## test Process
+![test](../../linked-list/assets/test11.png)
