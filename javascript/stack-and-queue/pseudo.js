@@ -1,30 +1,23 @@
 "use strict";
 
 // const Node = require("../linked-list/node");
-const Stack = require("./stack");
+const stack = require("./stack");
+
 class PseudoQueue {
   constructor() {
-    this.stack1 = new Stack();
-    this.stack2 = new Stack();
-    this.storage = null;
+    this.stack1 = new stack();
+    this.stack2 = new stack();
     this.top = null;
   }
   enqueue(value) {
-    let stack = new Stack(value);
-    if (this.top === null) {
-      this.top = this.stack2;
-    } else {
-      stack.next = this.stack1;
-      this.top = this.stack2;
-    }
+    this.stack1.pushItem(value);
   }
   dequeue() {
-    if (this.top) {
-      this.top = this.top.next;
-      this.length--;
-      return this.top.stack2;
-    } else {
+    if (this.stack1.top === "null") {
       return "exception";
+    } else {
+      this.stack2.pushItem(this.stack1.top.value);
+      this.stack1.popItem();
     }
   }
 }
