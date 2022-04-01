@@ -14,7 +14,7 @@
 | 08 | [Stack-/queue](./stack-and-queue/read/stack.md) |
 | 09 | [pseudo](./stack-and-queue/read/pseudo.md) |
 | 10 | [Animal-Shelter](./stack-and-queue/read/animal.md) |
-| 11 | [brackes](./stack-and-queue/read/brackets.md) |
+
 
 
 

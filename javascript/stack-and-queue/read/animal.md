@@ -9,13 +9,13 @@ Implement the following methods: enqueue,dequeue
 
 1. Create Methods:
    - enqueue
-Arguments: animal
-animal can be either a dog or a cat object.
-dequeue
-Arguments: pref
-pref can be either "dog" or "cat"
-Return: either a dog or a cat, based on preference.
-If pref is not "dog" or "cat" then return null.
+      Arguments: animal
+      animal can be either a dog or a cat object.
+   - dequeue
+      Arguments: pref
+      pref can be either "dog" or "cat"
+      Return: either a dog or a cat, based on preference.
+      If pref is not "dog" or "cat" then return null.
 
 2. Write tests to prove the following functionality
 
@@ -23,12 +23,12 @@ If pref is not "dog" or "cat" then return null.
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| enqueue|O(1): because used if | O(1)|
-| dequeue|O(1): |O(1) |
+| enqueue|O(n): because used if | O(n)|
+| dequeue|O(n): |O(n) |
 
 ## Whiteboard Process
 
-![link list](./../assets/animal.png)
+![AnimalShelter](./../../linked-list/assets/animal.png)
 
 
 
