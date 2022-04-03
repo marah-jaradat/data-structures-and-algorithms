@@ -16,7 +16,7 @@
 | 12 | [Animal-Shelter](./stack-and-queue/read/animal.md) |
 | 13 | [stack-queue-brackets](./stack-and-queue/read/bracket.md) |
 | 15 | [Binary-Tree](./tree/read/binary%26BST.md) |
-| 15 | [Tree-max](./tree/read/max.md) |
+| 16 | [Tree-max](./tree/read/max.md) |
 | 17 | [tree-breadth-first](./tree/read/breadth.md) |
 
 
