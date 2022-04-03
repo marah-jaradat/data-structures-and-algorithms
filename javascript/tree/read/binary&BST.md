@@ -31,12 +31,15 @@ Create a Node class that has properties for the value stored in the node, the le
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| binary-tree|O(n):based on the no. of nodes | O(n): based on the height of the tree|
-| binary-Search-tree|O(log(n))::based on the no. of nodes | O(h):based on the height of the tree|
+| binary-tree:preOrder|O(n):based on the no. of nodes | O(n): based on the height of the tree|
+| binary-tree:inOrder|O(n):based on the no. of nodes | O(n): based on the height of the tree|
+| binary-tree:postOrder|O(n):based on the no. of nodes | O(n): based on the height of the tree|
+| BST: add|O(n):based on the no. of nodes | O(log(n)): based on the height of the tree|
+| BST: contains|O(n)::based on the no. of nodes | O(log(n)):based on the height of the tree|
 
 
 ## Whiteboard Process
-![uml](./../assets/binarytree.png)
+![uml](./../assets/bst.png)
 
 ![binary-tree](./../assets/2022-04-02%20(2).png)
 ![BST](./../assets/2022-04-02%20(3).png)
