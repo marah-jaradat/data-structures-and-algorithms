@@ -18,12 +18,13 @@ Curly Brackets : {}
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| brackets function|O(n): because used if and while| O(n)|
+| brackets function|O(n): because used if and for| O(n)|
 
 
 ## Whiteboard Process
 
-![link list](./../../linked-list/assets/ch13.png)
+![bracket](./../assets/backet13.png)
+![bracket-test](./../assets/ch13test.png)
 
 
 

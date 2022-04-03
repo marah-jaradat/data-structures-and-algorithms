@@ -1,6 +1,6 @@
 "use strict";
 
-const Node = require("../linked-list/node");
+const Node = require("./../../linked-list/node");
 
 class Stack {
   constructor() {
