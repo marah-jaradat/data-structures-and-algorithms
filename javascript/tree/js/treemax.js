@@ -1,20 +1,28 @@
 "use strict";
 
-class Tree {
+class TreeMax {
   constructor(root = null) {
     this.root = root;
   }
 
-  Max() {
-    let arr = this.order();
-    let max = 0;
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] > max) {
-        max = arr[i];
-      }
+  getMaxVal() {
+    if (this.root === null) {
+      return "Empty tree!";
     }
-    return max;
+    let currNode = this.root.value;
+
+    const MaxTree = (node) => {
+      if (!node) return "Empty tree!";
+      currNode = node.value;
+      let leftMax = MaxTree(node.left);
+      let rightMax = MaxTree(node.right);
+      if (leftMax > currNode) currNode = leftMax;
+      if (rightMax > currNode) currNode = rightMax;
+      return currNode;
+    };
+    MaxTree(this.root);
+    return currNode;
   }
 }
 
-module.exports = Tree;
+module.exports = TreeMax;

@@ -16,12 +16,13 @@ Returns: number
 
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
-| max|O(n): | O(n)|
+| max|O(n):just using if statement | O(n)|
 
 
 ## Whiteboard Process
 
-![max]()
+![max](./../assets/max16.png)
 
+![maxtest](./../assets/maxtest.png)
 
 

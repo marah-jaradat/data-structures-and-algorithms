@@ -41,6 +41,27 @@ class BinaryTree {
     traverse(this.root);
     return result;
   }
+  add(value) {
+    let newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    }
+    const addNode = (node) => {
+      if (node.value > value) {
+        if (node.left === null) {
+          node.left = newNode;
+          this.length++;
+        }
+        addNode(node.left);
+      } else if (node.value < value) {
+        if (node.right === null) {
+          node.right = newNode;
+        }
+        addNode(node.right);
+      }
+    };
+    addNode(this.root);
+  }
 }
 
 module.exports = BinaryTree;
