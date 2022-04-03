@@ -9,10 +9,10 @@ const validateBrackets = function (string) {
       newStack.pushItem(value);
     }
     if (value === ")" || value === "}" || value === "]") {
-      if (newStack.length === 0) {
-        return false;
+      if (newStack.length !== 0) {
+        newStack.popItem();
       }
-      newStack.popItem();
+      return false;
     }
   }
   return newStack.length === 0;

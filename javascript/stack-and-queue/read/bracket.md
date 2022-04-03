@@ -23,7 +23,8 @@ Curly Brackets : {}
 
 ## Whiteboard Process
 
-![link list](./../../linked-list/assets/ch13.png)
+![bracket](./../assets/backet13.png)
+![bracket-test](./../assets/ch13test.png)
 
 
 
