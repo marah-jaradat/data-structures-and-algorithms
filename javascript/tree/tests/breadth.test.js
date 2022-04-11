@@ -1,25 +1,55 @@
 "use strict";
+const { BT } = require("../js/binarytree");
+const node = require("../js/node");
 
-const Node = require("../js/node");
-const breadthFirst = require("../js/breadth");
-const BinaryTree = require("../js/binarytree");
-// let treeTest = null;
+let tree = null;
 
-describe("breadthFirst test", () => {
-  test("breadthFirst function", () => {
-    let a = new Node(1);
-    let b = new Node(2);
-    let c = new Node(3);
-    let d = new Node(4);
-    let e = new Node(5);
+describe("testing BinaryTree", () => {
+  beforeAll(() => {
+    let first = new node(1);
+    let second = new node(2);
+    let third = new node(3);
+    let fourth = new node(4);
+    let fifth = new node(5);
+    let sixth = new node(6);
+    let seventh = new node(7);
 
-    a.left = b;
-    a.right = c;
-    b.left = d;
-    b.right = e;
+    first.left = second;
+    first.right = third;
+    second.left = fourth;
+    second.right = fifth;
+    third.left = sixth;
+    third.right = seventh;
 
-    let treeTest = new BinaryTree(a);
-    let resultArr = [1, 2, 3, 4, 5];
-    expect(breadthFirst(treeTest)).toEqual(resultArr);
+    tree = new BT(first);
+  });
+  it("constructor", () => {
+    expect(tree.root.value).toEqual(1);
+  });
+
+  it("preOrder method", () => {
+    let output = [1, 2, 4, 5, 3, 6, 7];
+    let preOrder = tree.preOrder();
+    // console.log("preOrder output ---->", preOrder);
+    expect(preOrder).toEqual(output);
+  });
+  it("inOrder method", () => {
+    let output = [4, 2, 5, 1, 6, 3, 7];
+    let inOrder = tree.inOrder();
+    // console.log("inOrder output ---->", inOrder);
+    expect(inOrder).toEqual(output);
+  });
+  it("postOrder method", () => {
+    let output = [4, 5, 2, 6, 7, 3, 1];
+    let postOrder = tree.postOrder();
+    // console.log("postOrder output ---->", postOrder);
+    expect(postOrder).toEqual(output);
+  });
+
+  it("BreadthFirst method", () => {
+    let output = [1, 2, 3, 4, 5, 6, 7];
+    let breadthFirst = tree.BreadthFirst();
+    console.log("breadthFirst output ---->", breadthFirst);
+    expect(tree.BreadthFirst()).toEqual(output);
   });
 });
