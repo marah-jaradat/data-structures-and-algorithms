@@ -18,7 +18,7 @@
 | 15 | [Binary-Tree](./tree/read/binary%26BST.md) |
 | 16 | [Tree-max](./tree/read/max.md) |
 | 17 | [tree-breadth-first](./tree/read/breadth.md) |
-| 18 | [tree-fizz-buzz](./tree/read/fizzbuzz.md |
+| 18 | [tree-fizz-buzz](./tree/read/fizzbuzz.md) |
 
 
 
