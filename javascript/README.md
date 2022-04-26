@@ -19,6 +19,7 @@
 | 16 | [Tree-max](./tree/read/max.md) |
 | 17 | [tree-breadth-first](./tree/read/breadth.md) |
 | 18 | [tree-fizz-buzz](./tree/read/fizzbuzz.md) |
+| 23 | [Selection-Sort](./new-group/selection.md) |
 
 
 
