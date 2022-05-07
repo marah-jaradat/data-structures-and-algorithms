@@ -23,7 +23,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 
 ## Whiteboard Process
 ![uml](./Whiteboard%20(10).png)
-
+![test](./testinsert.png)
 
 
 
