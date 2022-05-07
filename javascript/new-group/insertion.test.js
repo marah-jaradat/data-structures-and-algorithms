@@ -1,24 +1,22 @@
 "user strict";
-const insertionSort = require("./Insertion");
+
+const insertionSort = require("./Insertion.js");
+
 describe("insertionSort", () => {
-  it("should not sorted  array", () => {
-    expect(insertionSort([3, 1, 2, 5, 4, 6, 8, 7, 10, 9])).toEqual([
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    ]);
+  it("sorted  array", () => {
+    const arr = [8, 4, 23, 42, 16, 15];
+    expect(insertionSort(arr)).toEqual([4, 8, 15, 16, 23, 42]);
   });
-  it("testing nearly sorted array", () => {
-    expect(insertionSort([1, 2, 3, 4, 5, 6, 7, 8, 10, 9])).toEqual([
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    ]);
+  it("test nearly sorted", () => {
+    const arr = [4, 8, 15, 16, 42, 23];
+    expect(insertionSort(arr)).toEqual([4, 8, 15, 16, 23, 42]);
   });
-  it("testing reverssed array", () => {
-    expect(insertionSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])).toEqual([
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    ]);
+  it("test reversed", () => {
+    const arr = [42, 23, 16, 15, 8, 4];
+    expect(insertionSort(arr)).toEqual([4, 8, 15, 16, 23, 42]);
   });
-  it("testing few uniques array", () => {
-    expect(insertionSort([1, 2, 2, 4, 4, 3, 3, 5, 5, 1])).toEqual([
-      1, 1, 2, 2, 3, 3, 4, 4, 5, 5,
-    ]);
+  it("test few uniques", () => {
+    const arr = [8, 4, 4, 23, 23, 42, 16, 16, 15];
+    expect(insertionSort(arr)).toEqual([4, 4, 8, 15, 16, 16, 23, 23, 42]);
   });
 });
