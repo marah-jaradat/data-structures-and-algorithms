@@ -21,3 +21,4 @@
 | 18 | [tree-fizz-buzz](./tree/read/fizzbuzz.md) |
 | 26 | [Insertion-Sort](./new-group/Insertion.md) |
 | 27 | [Merge-Sort](./new-group/merge-sort.md) |
+| 28 | [Quick-Sort](./new-group/Quick-Sort.md) |
