@@ -27,6 +27,7 @@ Nearly-sorted: [2,3,5,7,13,11]
 
 ## Whiteboard Process
 ![uml](./Whiteboard%20(9).png)
+![test](./merge.png)
 
 
 
