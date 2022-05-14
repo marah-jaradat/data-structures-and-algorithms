@@ -10,8 +10,6 @@ describe("Hash Table", () => {
   it("Hashing the key value", () => {
     const hashTable = new HashTable(10);
     expect(hashTable.hash("marah")).toBe(1);
-    // expect(hashTable.hash("islam")).toBe(5);
-    // expect(hashTable.hash("ibrahim")).toBe(5);
   });
   it("Retrieving based on a key", () => {
     const hashTable = new HashTable(10);
@@ -41,7 +39,6 @@ describe("Hash Table", () => {
     const hashTable = new HashTable(10);
     hashTable.set("marah", "developer");
     hashTable.set("age", "25");
-    // console.log(hashTable);
     expect(hashTable.get("marah")).toBe("developer");
   });
   it("Successfully retrieve a value from a bucket", () => {
