@@ -1,6 +1,6 @@
 "use strict";
 
-const HashTable = require("./hashtable");
+const HashTable = require("../hashtable");
 
 describe("Hash Table", () => {
   it("Setting a key/value to your hashtable result", () => {
