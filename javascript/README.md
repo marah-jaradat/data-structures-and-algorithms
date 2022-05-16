@@ -20,7 +20,6 @@
 | 17 | [tree-breadth-first](./tree/read/breadth.md) |
 | 18 | [tree-fizz-buzz](./tree/read/fizzbuzz.md) |
 | 26 | [Insertion-Sort](./new-group/insertion/Insertion.md) |
-| 27 | [Merge-Sort](./new-group/merge/merge-sort.md) |
-| 28 | [Quick-Sort](./new-group/QuickSort/Quick-Sort.md) |
-| 30 | [HashTables](./new-group/hashtables/readme/hashtable.md) |
-| 31 | [first-repeated-word](./new-group/hashtables/readme/firstRepeated.md) |
+| 27 | [Merge-Sort](./new-group/merge-sort.md) |
+| 28 | [Quick-Sort](./new-group/Quick-Sort.md) |
+
