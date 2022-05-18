@@ -10,9 +10,12 @@ class HashTable {
   }
   hash(key) {
     return (
-      (key.split(" ").reduce((acc, curr) => {
-        return acc + curr.charCodeAt();
-      }, 0) *
+      (key
+        .toString()
+        .split(" ")
+        .reduce((acc, curr) => {
+          return acc + curr.charCodeAt();
+        }, 0) *
         599) %
       this.size
     );
