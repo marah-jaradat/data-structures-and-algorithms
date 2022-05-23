@@ -1,31 +1,31 @@
 const hashmapLeftJoin = require("./hashLeft");
 
-describe("", () => {
+describe(" Testing the left join to the hashmap ", () => {
   let map1 = new Map();
-  map1.set("foo", 1);
-  map1.set("bar", 2);
-  map1.set("qux", 3);
-  map1.set("quux", 4);
+  map1.set("marah", 1);
+  map1.set("jaradat", 2);
+  map1.set("webdevelop", 3);
+  map1.set("javascript", 4);
   let map2 = new Map();
-  map2.set("foo", "A");
-  map2.set("fred", "B");
-  map2.set("waldo", "C");
-  map2.set("quux", "D");
+  map2.set("marah", "A");
+  map2.set("Sara", "B");
+  map2.set("farah", "C");
+  map2.set("javascript", "D");
 
   let map3 = new Map();
-  map3.set("span", "A");
+  map3.set("bee", "A");
   map3.set("eggs", "B");
   map3.set("toast", "C");
-  map3.set("ham", "D");
+  map3.set("turkey", "D");
 
-  it("can successfully left join 2 hashmaps and return the result as an array of arrays", () => {
+  it("can successfully left join 2 hashmaps and return the result", () => {
     let joinedMaps = hashmapLeftJoin(map1, map2);
 
     expect(joinedMaps).toEqual([
-      ["foo", 1, "A"],
-      ["bar", 2, null],
-      ["qux", 3, null],
-      ["quux", 4, "D"],
+      ["marah", 1, "A"],
+      ["jaradat", 2, null],
+      ["webdevelop", 3, null],
+      ["javascript", 4, "D"],
     ]);
   });
 
@@ -33,10 +33,10 @@ describe("", () => {
     let joinedMaps = hashmapLeftJoin(map1, map3);
 
     expect(joinedMaps).toEqual([
-      ["foo", 1, null],
-      ["bar", 2, null],
-      ["qux", 3, null],
-      ["quux", 4, null],
+      ["marah", 1, null],
+      ["jaradat", 2, null],
+      ["webdevelop", 3, null],
+      ["javascript", 4, null],
     ]);
   });
 
@@ -46,20 +46,20 @@ describe("", () => {
 
     expect(joinedMaps1).toEqual([]);
     expect(joinedMaps2).toEqual([
-      ["foo", 1, null],
-      ["bar", 2, null],
-      ["qux", 3, null],
-      ["quux", 4, null],
+      ["marah", 1, null],
+      ["jaradat", 2, null],
+      ["webdevelop", 3, null],
+      ["javascript", 4, null],
     ]);
   });
 
-  it("can successfully left join 2 hashmaps where the 2nd hashmap's values all exist in the first hashma", () => {
+  it("can successfully left join 2 hashmaps where the 2nd hashmap's values all exist in the first hashmap", () => {
     let joinedMaps = hashmapLeftJoin(map1, map1);
     expect(joinedMaps).toEqual([
-      ["foo", 1, 1],
-      ["bar", 2, 2],
-      ["qux", 3, 3],
-      ["quux", 4, 4],
+      ["marah", 1, 1],
+      ["jaradat", 2, 2],
+      ["webdevelop", 3, 3],
+      ["javascript", 4, 4],
     ]);
   });
 });
