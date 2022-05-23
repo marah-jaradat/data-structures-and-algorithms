@@ -1,3 +1,5 @@
+"use strict";
+
 function hashMapLeftJoin(map1, map2) {
   let result = [];
 
