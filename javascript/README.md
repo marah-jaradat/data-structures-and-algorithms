@@ -25,3 +25,4 @@
 | 30 | [HashTables](./new-group/hashtables/readme/hashtable.md) |
 | 31 | [first-repeated-word](./new-group/hashtables/readme/firstRepeated.md) |
 | 32 | [Implementation: Graphs](./graphs/readme.md) |
+| 36 | [Implement a breadth-first traversal on a graph.](./graphs/breadth.md) |
