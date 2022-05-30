@@ -24,22 +24,30 @@ class Graph {
   size() {
     return this.adjList.size;
   }
-  //   removeEdge(node1, node2) {
-  //     const neighbors = this.adjList.get(node1);
 
-  //     const newNeighbors = neighbors.filter(
-  //       (neighbor) => neighbor.vertex !== node2
-  //     );
-
-  //     this.adjList.set(node1, newNeighbors);
-  //   }
-  //   removeNode(node) {
-  //     this.adjList.delete(node);
-  //     this.adjList.forEach((value, key) => {
-  //       const newNeighbors = value.filter((neighbor) => neighbor.vertex !== node);
-  //       this.adjList.set(key, newNeighbors);
-  //     });
-  //   }
+  BreadthFirst(start) {
+    if (this.adjList.size === 0) {
+      return "Empty graph";
+    }
+    if (!this.adjList.has(start)) {
+      return null;
+    }
+    let queue = [];
+    let visited = new Set();
+    let current;
+    queue.push(start);
+    visited.add(start);
+    while (queue.length) {
+      let front = queue.shift();
+      current = this.getNeioughbors(front);
+      current.forEach((neighbor) => {
+        if (!visited.has(neighbor.vertex)) {
+          queue.push(neighbor.vertex);
+          visited.add(neighbor.vertex);
+        }
+      });
+    }
+    return visited;
+  }
 }
-
 module.exports = Graph;
