@@ -21,3 +21,9 @@
 | 18 | [tree-fizz-buzz](./tree/read/fizzbuzz.md) |
 | 26 | [Insertion-Sort](./new-group/insertion.md) |
 | 27 | [Merge-Sort](./new-group/merge-sort.md) |
+| 28 | [Quick-Sort](./new-group/QuickSort/Quick-Sort.md) |
+| 30 | [HashTables](./new-group/hashtables/readme/hashtable.md) |
+| 31 | [first-repeated-word](./new-group/hashtables/readme/firstRepeated.md) |
+| 32 | [Implementation: Graphs](./graphs/readme/readme.md) |
+| 36 | [Implement a breadth-first traversal on a graph.](./graphs/readme/breadth.md) |
+| 37 | [graph-business-trip](./graphs/readme/businessTrip.md) |
