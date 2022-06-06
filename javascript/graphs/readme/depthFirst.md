@@ -18,3 +18,8 @@ Conduct a depth first preorder traversal on a graph
 | method|Time complexity |Space complexity | 
 | :---: | :---: | :---: |
 |graph-depth-first|O(n)| O(n)|
+
+
+![whiteboard](../assets/depthGraph.png)
+
+![test](../assets/depthTest.png)
