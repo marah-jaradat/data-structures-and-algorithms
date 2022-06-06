@@ -67,9 +67,7 @@ class Graph {
         stack.push(node);
       }
       const neighbors = this.getNeioughbors(node);
-      console.log("neighbors", neighbors);
       for (let neighbor of neighbors) {
-        // console.log("neighbor", neighbor);
         if (!visitedNodes.includes(neighbor.vertex)) {
           traverse(neighbor.vertex, visitedNodes);
         }
